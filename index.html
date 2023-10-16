@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>MelodyGlobal</title>
+  <script src="./src/script.ts" type="module"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+  crossorigin=""></script>
+  <link rel="stylesheet" href="./css/index.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div id="map"></div>
+  <div id="sidebar">
+      <div id="sidebar-title">
+          <span style="display: inline-block;"><h1 id="name"></h1></span>
+          <span style="display: inline-block;">
+              <p style="text-align:right;">
+                  <a id="close" href="javascript:void(0)" onclick="hideSidebar()">
+                      <i class="fa fa-close" id="close-text" style="font-size:2.5em; color:black;"></i>
+                  </a>
+              </p>
+          </span>
+      </div>
+      <div id="songs" style="margin:15px; overflow-y:scroll; height: 90vh;">
+        <iframe style="border-radius:12px; padding:7px 0px;" src="https://open.spotify.com/embed/track/4cOdK2wGLETKBW3PvgPWqT?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px; padding:7px 0px;" src="https://open.spotify.com/embed/track/03UrZgTINDqvnUMbbIMhql?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px; padding:7px 0px;" src="https://open.spotify.com/embed/track/34dx8DACTJsc3rsJdaEIQw?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px; padding:7px 0px;" src="https://open.spotify.com/embed/track/4VYv4gIbr6XPWKTddnGBlh?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px; padding:7px 0px;" src="https://open.spotify.com/embed/track/6habFhsOp2NvshLv26DqMb?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+  </div>
+</body>
+
+<!--
+Call the country_genres file to initialize all the genres
+<script src="./leaflet/genres/country_genres.js"></script>
+<script src="../../../api/spotify/get_similar_songs/similar.js"></script>
+-->
+
+<!--Call the countries' files first so that leaflet.js can access the global variables (avoids using modules)-->
+<script src="./leaflet/geojson/north_america.js"></script>
+<script src="./leaflet/geojson/south_america.js"></script>
+<script src="./leaflet/geojson/asia.js"></script>
+<script src="./leaflet/geojson/australia.js"></script>
+<script src="./leaflet/geojson/europe.js"></script>
+<script src="./leaflet/geojson/africa.js"></script>
+
+<!--This actually renders the map-->
+<script src="./leaflet/leaflet.js"></script>
+</html>
